@@ -2,6 +2,7 @@
 
 import MobileNav from "@/Components/MobileNav";
 import Nav from "@/Components/Nav";
+import Hero from "@/Components/Hero";
 import React, { useState } from "react";
 
 const HomePage = () => {
@@ -13,8 +14,11 @@ const HomePage = () => {
     return (
       <div className="overflow-x-hidden">
         <div>
-          {/* <MobileNav nav={nav} closeNav={closeNav} /> */}
+          {/* navbar section */}
+          <MobileNav nav={nav} closeNav={closeNav} />
           <Nav openNav={openNav} />
+          {/* hero section */}
+          <Hero />
         </div>
       </div>
     );
