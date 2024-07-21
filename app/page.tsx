@@ -5,6 +5,8 @@ import Nav from "@/Components/Nav";
 import Hero from "@/Components/Hero";
 import React, { useState } from "react";
 import About from "@/Components/About";
+import Service from "@/Components/Services";
+import Skills  from "@/Components/Skills";
 
 const HomePage = () => {
   
@@ -23,6 +25,8 @@ const HomePage = () => {
           {/* About */}
           <div className="relative z-[30]">
             <About />
+            <Service />
+            <Skills />
           </div>
         </div>
       </div>
