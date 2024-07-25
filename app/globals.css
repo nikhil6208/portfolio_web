@@ -6,6 +6,7 @@
 
 @layer components {
   .nav-link {
+    /* @apply relative font-semibold text-white cursor-pointer md:block after:block; */
     @apply relative font-semibold text-white cursor-pointer md:block after:block hidden;
 
      /* Custom font size */
@@ -35,6 +36,7 @@
      /* Custom font size */
      font-size: 27px;
      margin-bottom: 2rem;
+     color: black;
 
     /* Pseudo-element styling */
     &::after {

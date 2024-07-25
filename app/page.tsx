@@ -7,18 +7,29 @@ import React, { useState } from "react";
 import About from "@/Components/About";
 import Service from "@/Components/Services";
 import Skills  from "@/Components/Skills";
+import Projects from "@/Components/Projects";
+import Testimonial from "@/Components/Testimonial";
+import Blogs from "@/Components/Blogs";
 
 const HomePage = () => {
   
-  const [nav, setNav] = useState(false);
-  const openNav = () => setNav(true);
-  const closeNav = () => setNav(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+  const openNav = () => setIsNavOpen(true);
+  // const closeNav = () => setNav(false);
 
     return (
       <div className="overflow-x-hidden">
         <div>
           {/* navbar section */}
-          <MobileNav nav={nav} closeNav={closeNav} />
+          <div>
+            <button onClick={toggleNav}>Toggle Navigation</button>
+            <MobileNav isNavOpen={isNavOpen} toggleNav={toggleNav} />
+          </div>
+          {/* <MobileNav nav={nav} closeNav={closeNav} /> */}
           <Nav openNav={openNav} />
           {/* hero section */}
           <Hero />
@@ -27,6 +38,9 @@ const HomePage = () => {
             <About />
             <Service />
             <Skills />
+            <Projects />
+            <Testimonial />
+            <Blogs />
           </div>
         </div>
       </div>
